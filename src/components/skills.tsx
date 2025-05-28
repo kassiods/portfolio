@@ -11,7 +11,7 @@ import {
   DatabaseZapIcon,
   GitForkIcon,
   BrainCogIcon, // For AI/ML as an example
-  SmartphoneIcon // For Mobile Dev as an example
+  PuzzleIcon, // Changed from SmartphoneIcon for Next.js
 } from 'lucide-react';
 
 const skillsData: Skill[] = [
@@ -25,7 +25,7 @@ const skillsData: Skill[] = [
   { name: 'MongoDB', icon: DatabaseZapIcon, color: "text-green-600" },
   { name: 'Git', icon: GitForkIcon, color: "text-red-500" },
   { name: 'Inteligência Artificial', icon: BrainCogIcon, color: "text-purple-400" },
-  { name: 'Desenvolvimento Mobile', icon: SmartphoneIcon, color: "text-indigo-400" },
+  { name: 'Next.js', icon: PuzzleIcon, color: "text-gray-400" }, // Changed from Desenvolvimento Mobile
 ];
 
 export default function Skills() {
