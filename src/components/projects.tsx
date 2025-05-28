@@ -10,7 +10,7 @@ const projectsData: Project[] = [
   {
     id: '1',
     title: 'Plataforma de Estudos IA',
-    description: 'UGym aplicativo inteligente de monitoramento de academias, alunos e personais, aplicativo inovador',
+    description: 'UGym: Uma solução inteligente para o monitoramento de academias, otimizando a gestão de alunos e treinadores pessoais através de uma plataforma inovadora.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'education technology',
     githubUrl: 'https://github.com/seuusuario/plataforma-estudos-ia',
@@ -36,8 +36,8 @@ export default function Projects() {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"> {/* Adjusted grid to lg:grid-cols-2 */}
           {projectsData.map((project, index) => (
-            <Card 
-              key={project.id} 
+            <Card
+              key={project.id}
               className="bg-card border-primary/20 shadow-lg hover:shadow-primary/30 transition-shadow duration-300 flex flex-col overflow-hidden animate-fadeInLoad"
               style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
