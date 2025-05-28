@@ -36,7 +36,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" legacyBehavior passHref>
             <a className="text-3xl font-bold text-primary hover:text-accent transition-colors">
-              i&apos;ts me kassio
+              It&apos;s me Kassio
             </a>
           </Link>
 
@@ -64,7 +64,7 @@ export default function Header() {
                 <div className="flex justify-between items-center mb-8">
                    <Link href="/" legacyBehavior passHref>
                     <a className="text-2xl font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
-                      i&apos;ts me kassio
+                      It&apos;s me Kassio
                     </a>
                   </Link>
                   <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
