@@ -14,7 +14,7 @@ export default function Contact() {
         </p>
         
         <div className="flex flex-wrap justify-center gap-6 animate-fadeInLoad" style={{ animationDelay: "0.4s" }}>
-          <Link href="https://www.linkedin.com/in/seuusuario" passHref legacyBehavior>
+          <Link href="https://www.linkedin.com/in/kassiodias" passHref legacyBehavior>
             <a target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                 <LinkedinIcon className="mr-2 h-5 w-5" /> LinkedIn
