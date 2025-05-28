@@ -11,8 +11,8 @@ const projectsData: Project[] = [
     id: '1',
     title: 'UGym',
     description: 'UGym: Uma solução inteligente para o monitoramento de academias, otimizando a gestão de alunos e treinadores pessoais através de uma plataforma inovadora.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'education technology',
+    imageUrl: 'https://placehold.co/600x400.png', // Using a placeholder
+    imageHint: 'dumbbell logo', // Updated hint based on your image
     githubUrl: 'https://github.com/ifpi-picos/projeto-integrador-ugym',
     liveDemoUrl: 'https://ugym-react.vercel.app',
     tags: ['React', 'Node.js', 'IA', 'Supabase'],
@@ -23,7 +23,7 @@ const projectsData: Project[] = [
     description: 'Uma landing page moderna e responsiva para o projeto UGym, focada em apresentar os benefícios e funcionalidades da plataforma de forma atraente e intuitiva.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'landing page fitness',
-    githubUrl: 'https://github.com/kassiods/Landinpage_UGym', // Updated link
+    githubUrl: 'https://github.com/kassiods/Landinpage_UGym',
     // liveDemoUrl: 'https://ugym-landingpage.vercel.app', // Example, can be added if available
     tags: ['Next.js', 'Tailwind CSS', 'React', 'UX/UI Design'],
   },
