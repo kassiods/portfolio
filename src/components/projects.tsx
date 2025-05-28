@@ -14,7 +14,7 @@ const projectsData: Project[] = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'education technology',
     githubUrl: 'https://github.com/seuusuario/plataforma-estudos-ia',
-    tags: ['React', 'Node.js', 'IA', 'MongoDB'],
+    tags: ['React', 'Node.js', 'IA', 'Supabase'],
   },
   {
     id: '2',
