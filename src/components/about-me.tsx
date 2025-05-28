@@ -30,7 +30,7 @@ export default function AboutMe() {
             </Card>
           </div>
           <div className="animate-fadeInLoad order-first md:order-last flex justify-center items-center" style={{ animationDelay: "0.4s" }}>
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-primary">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden shadow-2xl border-4 border-primary">
               <Image
                 src="https://placehold.co/400x400.png"
                 alt="Kassio - Programador Full Stack"
