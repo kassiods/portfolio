@@ -13,7 +13,7 @@ const projectsData: Project[] = [
     id: '1',
     title: 'UGym',
     description: 'UGym: Uma solução inteligente para o monitoramento de academias, otimizando a gestão de alunos e treinadores pessoais através de uma plataforma inovadora.',
-    imageUrl: 'https://placehold.co/600x400.png', // Reverted to placeholder
+    imageUrl: 'https://placehold.co/600x400.png', // Corrected from 'logo'
     imageHint: 'dumbbell logo',
     githubUrl: 'https://github.com/ifpi-picos/projeto-integrador-ugym',
     liveDemoUrl: 'https://ugym-react.vercel.app',
