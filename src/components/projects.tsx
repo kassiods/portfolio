@@ -23,7 +23,7 @@ const projectsData: Project[] = [
     description: 'Estou constantemente desenvolvendo novos projetos e aprimorando minhas habilidades. Para acompanhar meus trabalhos mais recentes e outras contribuições, visite meu perfil no GitHub!',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'coding gears',
-    githubUrl: 'https://github.com/seuusuario', // This should link to the main GitHub profile
+    githubUrl: 'https://github.com/kassiods', // Updated link
     tags: ['Desenvolvimento Contínuo', 'Novidades', 'GitHub'],
   },
 ];
