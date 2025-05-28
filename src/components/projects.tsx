@@ -19,12 +19,12 @@ const projectsData: Project[] = [
   },
   {
     id: '2',
-    title: 'Analisador de Sentimentos',
-    description: 'Ferramenta baseada em Python que analisa o sentimento de textos (tweets, reviews) usando Machine Learning, classificando-os como positivo, negativo ou neutro.',
+    title: 'Explorando Novas Ideias',
+    description: 'Estou constantemente desenvolvendo novos projetos e aprimorando minhas habilidades. Para acompanhar meus trabalhos mais recentes e outras contribuições, visite meu perfil no GitHub!',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'data analysis',
-    githubUrl: 'https://github.com/seuusuario/analisador-sentimentos',
-    tags: ['Python', 'Machine Learning', 'NLP', 'Flask'],
+    imageHint: 'coding gears',
+    githubUrl: 'https://github.com/seuusuario', // This should link to the main GitHub profile
+    tags: ['Desenvolvimento Contínuo', 'Novidades', 'GitHub'],
   },
 ];
 
@@ -69,7 +69,7 @@ export default function Projects() {
                 <Link href={project.githubUrl} passHref legacyBehavior>
                   <a target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <GithubIcon className="mr-2 h-4 w-4" /> Ver no GitHub
+                      <GithubIcon className="mr-2 h-4 w-4" /> {project.id === '2' ? 'Ver Meu GitHub' : 'Ver no GitHub'}
                     </Button>
                   </a>
                 </Link>
