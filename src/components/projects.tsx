@@ -23,7 +23,7 @@ const projectsData: Project[] = [
     description: 'Estou constantemente desenvolvendo novos projetos e aprimorando minhas habilidades. Para acompanhar meus trabalhos mais recentes e outras contribuições, visite meu perfil no GitHub!',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'coding gears',
-    githubUrl: 'https://github.com/kassiods', // Updated link
+    githubUrl: 'https://github.com/kassiods', 
     tags: ['Desenvolvimento Contínuo', 'Novidades', 'GitHub'],
   },
 ];
@@ -39,7 +39,7 @@ export default function Projects() {
           {projectsData.map((project, index) => (
             <Card
               key={project.id}
-              className="bg-card border-primary/20 shadow-lg hover:shadow-primary/30 transition-shadow duration-300 flex flex-col overflow-hidden animate-fadeInLoad"
+              className="bg-card border-primary/20 shadow-lg hover:shadow-primary/30 transition-shadow duration-300 flex flex-col overflow-hidden animate-fadeInLoad group" // Added 'group' class
               style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
               <div className="relative w-full h-56">

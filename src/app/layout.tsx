@@ -1,16 +1,16 @@
 import type {Metadata} from 'next';
-import { Geist, Geist_Mono } from 'next/font/google'; // Correct import for Geist
+import { Inter, Roboto_Mono } from 'next/font/google'; // Changed from Geist
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"; // Import Toaster
 
-const geistSans = Geist({ // Correct usage of Geist
-  variable: '--font-geist-sans',
+const interFont = Inter({ // Changed to Inter & renamed instance
   subsets: ['latin'],
+  variable: '--font-sans', // Using a more standard variable name
 });
 
-const geistMono = Geist_Mono({ // Correct usage of Geist_Mono
-  variable: '--font-geist-mono',
+const robotoMonoFont = Roboto_Mono({ // Changed to Roboto_Mono & renamed instance
   subsets: ['latin'],
+  variable: '--font-mono', // Using a more standard variable name
 });
 
 export const metadata: Metadata = {
@@ -24,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
+    <html lang="pt-BR" className={`${interFont.variable} ${robotoMonoFont.variable} scroll-smooth`}>
+      <body className={`antialiased bg-background text-foreground`}>
         {children}
         <Toaster />
       </body>
