@@ -1,11 +1,12 @@
 
 import type { Project } from '@/types';
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { GithubIcon, ExternalLinkIcon } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import logo from '@/assets/img/github-image.png'; // Corrected import path
 
 const projectsData: Project[] = [
   {
@@ -25,15 +26,14 @@ const projectsData: Project[] = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'landing page fitness',
     githubUrl: 'https://github.com/kassiods/Landinpage_UGym',
-    // liveDemoUrl: 'https://ugym-landingpage.vercel.app', // Example, can be added if available
     tags: ['Next.js', 'Tailwind CSS', 'React', 'UX/UI Design'],
   },
   {
     id: '2',
     title: 'Explorando Novas Ideias',
     description: 'Estou constantemente desenvolvendo novos projetos e aprimorando minhas habilidades. Para acompanhar meus trabalhos mais recentes e outras contribuições, visite meu perfil no GitHub!',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'github profile coding', // Updated hint
+    imageUrl: logo, // Use the imported 'logo' for this project
+    imageHint: 'github profile coding',
     githubUrl: 'https://github.com/kassiods',
     tags: ['Desenvolvimento Contínuo', 'Novidades', 'GitHub'],
   },
@@ -61,6 +61,9 @@ export default function Projects() {
                   objectFit="cover"
                   data-ai-hint={project.imageHint}
                   className="transition-transform duration-300 group-hover:scale-105"
+                  // Conditional placeholder and blurDataURL for locally imported images vs. remote URLs
+                  placeholder={typeof project.imageUrl === 'string' && project.imageUrl.startsWith('https://placehold.co') ? undefined : 'blur'}
+                  blurDataURL={typeof project.imageUrl === 'string' && project.imageUrl.startsWith('https://placehold.co') ? undefined : (project.imageUrl as StaticImageData).blurDataURL}
                 />
               </div>
               <CardHeader>
