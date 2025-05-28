@@ -25,15 +25,6 @@ const projectsData: Project[] = [
     githubUrl: 'https://github.com/seuusuario/analisador-sentimentos',
     tags: ['Python', 'Machine Learning', 'NLP', 'Flask'],
   },
-  {
-    id: '3',
-    title: 'Portfolio Pessoal v1',
-    description: 'Versão anterior do meu portfolio, desenvolvida para explorar conceitos de design web e componentização com JavaScript puro.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'web design',
-    githubUrl: 'https://github.com/seuusuario/portfolio-v1',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-  },
 ];
 
 export default function Projects() {
@@ -43,7 +34,7 @@ export default function Projects() {
         <h2 className="text-4xl font-bold text-center mb-12 text-primary animate-fadeInLoad">
           Meus Projetos
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"> {/* Adjusted grid to lg:grid-cols-2 */}
           {projectsData.map((project, index) => (
             <Card 
               key={project.id} 
