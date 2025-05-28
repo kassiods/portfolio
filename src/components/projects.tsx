@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge';
 const projectsData: Project[] = [
   {
     id: '1',
-    title: 'Plataforma de Estudos IA',
+    title: 'UGym',
     description: 'UGym: Uma solução inteligente para o monitoramento de academias, otimizando a gestão de alunos e treinadores pessoais através de uma plataforma inovadora.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'education technology',
