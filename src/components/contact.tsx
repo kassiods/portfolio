@@ -1,9 +1,22 @@
+
+"use client";
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GithubIcon, LinkedinIcon, InstagramIcon, MailIcon } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 
 export default function Contact() {
+  const { toast } = useToast();
+
+  const handleEmailClick = () => {
+    toast({
+      title: "Abrindo cliente de e-mail",
+      description: "Seu cliente de e-mail padrão será aberto para enviar uma mensagem.",
+    });
+  };
+
   return (
     <section id="contact" className="section-padding bg-background/70 backdrop-blur-sm">
       <div className="container mx-auto text-center">
@@ -36,7 +49,7 @@ export default function Contact() {
             </a>
           </Link>
           <Link href="mailto:kassiodesousadias@gmail.com" passHref legacyBehavior>
-             <a target="_blank" rel="noopener noreferrer">
+             <a target="_blank" rel="noopener noreferrer" onClick={handleEmailClick}>
               <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                 <MailIcon className="mr-2 h-5 w-5" /> Email
               </Button>
