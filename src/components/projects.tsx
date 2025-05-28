@@ -11,7 +11,7 @@ const projectsData: Project[] = [
     id: '1',
     title: 'UGym',
     description: 'UGym: Uma solução inteligente para o monitoramento de academias, otimizando a gestão de alunos e treinadores pessoais através de uma plataforma inovadora.',
-    imageUrl: 'https://placehold.co/600x400.png', // Using a placeholder
+    imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'dumbbell logo',
     githubUrl: 'https://github.com/ifpi-picos/projeto-integrador-ugym',
     liveDemoUrl: 'https://ugym-react.vercel.app',
@@ -32,7 +32,7 @@ const projectsData: Project[] = [
     title: 'Explorando Novas Ideias',
     description: 'Estou constantemente desenvolvendo novos projetos e aprimorando minhas habilidades. Para acompanhar meus trabalhos mais recentes e outras contribuições, visite meu perfil no GitHub!',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'coding gears',
+    imageHint: 'coding gears', // Updated hint
     githubUrl: 'https://github.com/kassiods',
     tags: ['Desenvolvimento Contínuo', 'Novidades', 'GitHub'],
   },
