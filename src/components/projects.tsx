@@ -18,6 +18,16 @@ const projectsData: Project[] = [
     tags: ['React', 'Node.js', 'IA', 'Supabase'],
   },
   {
+    id: '3',
+    title: 'Landing Page UGym',
+    description: 'Uma landing page moderna e responsiva para o projeto UGym, focada em apresentar os benefícios e funcionalidades da plataforma de forma atraente e intuitiva.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'landing page fitness',
+    githubUrl: 'https://github.com/ifpi-picos/projeto-integrador-ugym', // Assuming it's part of the same repo or can be updated later
+    // liveDemoUrl: 'https://ugym-landingpage.vercel.app', // Example, can be added if available
+    tags: ['Next.js', 'Tailwind CSS', 'React', 'UX/UI Design'],
+  },
+  {
     id: '2',
     title: 'Explorando Novas Ideias',
     description: 'Estou constantemente desenvolvendo novos projetos e aprimorando minhas habilidades. Para acompanhar meus trabalhos mais recentes e outras contribuições, visite meu perfil no GitHub!',
