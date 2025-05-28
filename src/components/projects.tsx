@@ -6,14 +6,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { GithubIcon, ExternalLinkIcon } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-// Removed problematic import: import Logo from '@/assets/img/leftimage.png';
 
 const projectsData: Project[] = [
   {
     id: '1',
     title: 'UGym',
     description: 'UGym: Uma solução inteligente para o monitoramento de academias, otimizando a gestão de alunos e treinadores pessoais através de uma plataforma inovadora.',
-    imageUrl: 'https://placehold.co/600x400.png', // Corrected from 'logo'
+    imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'dumbbell logo',
     githubUrl: 'https://github.com/ifpi-picos/projeto-integrador-ugym',
     liveDemoUrl: 'https://ugym-react.vercel.app',
@@ -34,7 +33,7 @@ const projectsData: Project[] = [
     title: 'Explorando Novas Ideias',
     description: 'Estou constantemente desenvolvendo novos projetos e aprimorando minhas habilidades. Para acompanhar meus trabalhos mais recentes e outras contribuições, visite meu perfil no GitHub!',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'coding gears',
+    imageHint: 'github profile coding', // Updated hint
     githubUrl: 'https://github.com/kassiods',
     tags: ['Desenvolvimento Contínuo', 'Novidades', 'GitHub'],
   },
@@ -62,9 +61,6 @@ export default function Projects() {
                   objectFit="cover"
                   data-ai-hint={project.imageHint}
                   className="transition-transform duration-300 group-hover:scale-105"
-                  // For remote placeholders, 'placeholder' and 'blurDataURL' are not typically needed
-                  // unless you are generating a specific blur effect server-side.
-                  // For simplicity, we'll rely on Next/Image's default handling for remote images.
                 />
               </div>
               <CardHeader>
