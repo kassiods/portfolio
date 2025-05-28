@@ -1,12 +1,12 @@
 
 import type { LucideIcon } from 'lucide-react';
-import type { StaticImageData } from 'next/image';
+// import type { StaticImageData } from 'next/image'; // Temporarily removed
 
 export interface Project {
   id: string;
   title: string;
   description: string;
-  imageUrl: string | StaticImageData; // Allow StaticImageData for imported images
+  imageUrl: string; // Reverted to string only
   imageHint?: string;
   githubUrl: string;
   liveDemoUrl?: string;

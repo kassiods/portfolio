@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { GithubIcon, ExternalLinkIcon } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import Logo from '@/assets/img/leftimage.png'; // Corrected import path
+// Removed problematic import: import Logo from '@/assets/img/leftimage.png';
 
 const projectsData: Project[] = [
   {
     id: '1',
     title: 'UGym',
     description: 'UGym: Uma solução inteligente para o monitoramento de academias, otimizando a gestão de alunos e treinadores pessoais através de uma plataforma inovadora.',
-    imageUrl: Logo, // Use the imported image object
+    imageUrl: 'https://placehold.co/600x400.png', // Reverted to placeholder
     imageHint: 'dumbbell logo',
     githubUrl: 'https://github.com/ifpi-picos/projeto-integrador-ugym',
     liveDemoUrl: 'https://ugym-react.vercel.app',
@@ -62,8 +62,9 @@ export default function Projects() {
                   objectFit="cover"
                   data-ai-hint={project.imageHint}
                   className="transition-transform duration-300 group-hover:scale-105"
-                  placeholder={typeof project.imageUrl === 'string' && project.imageUrl.startsWith('https://placehold.co') ? undefined : "blur"}
-                  blurDataURL={typeof project.imageUrl === 'object' ? undefined : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="} // Provide a minimal blur placeholder for imported images if needed, or handle appropriately
+                  // For remote placeholders, 'placeholder' and 'blurDataURL' are not typically needed
+                  // unless you are generating a specific blur effect server-side.
+                  // For simplicity, we'll rely on Next/Image's default handling for remote images.
                 />
               </div>
               <CardHeader>
