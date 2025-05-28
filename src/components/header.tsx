@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -35,7 +36,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" legacyBehavior passHref>
             <a className="text-3xl font-bold text-primary hover:text-accent transition-colors">
-              Kassio
+              i&apos;ts me kassio
             </a>
           </Link>
 
@@ -63,7 +64,7 @@ export default function Header() {
                 <div className="flex justify-between items-center mb-8">
                    <Link href="/" legacyBehavior passHref>
                     <a className="text-2xl font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
-                      Kassio
+                      i&apos;ts me kassio
                     </a>
                   </Link>
                   <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
