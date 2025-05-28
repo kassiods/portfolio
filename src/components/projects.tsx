@@ -13,7 +13,7 @@ const projectsData: Project[] = [
     id: '1',
     title: 'UGym',
     description: 'UGym: Uma solução inteligente para o monitoramento de academias, otimizando a gestão de alunos e treinadores pessoais através de uma plataforma inovadora.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: logo, // Use imported logo
     imageHint: 'dumbbell logo',
     githubUrl: 'https://github.com/ifpi-picos/projeto-integrador-ugym',
     liveDemoUrl: 'https://ugym-react.vercel.app',
@@ -23,7 +23,7 @@ const projectsData: Project[] = [
     id: '3',
     title: 'Landing Page UGym',
     description: 'Uma landing page moderna e responsiva para o projeto UGym, focada em apresentar os benefícios e funcionalidades da plataforma de forma atraente e intuitiva.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: logo, // Use imported logo
     imageHint: 'landing page fitness',
     githubUrl: 'https://github.com/kassiods/Landinpage_UGym',
     tags: ['Next.js', 'Tailwind CSS', 'React', 'UX/UI Design'],
@@ -58,12 +58,12 @@ export default function Projects() {
                   src={project.imageUrl}
                   alt={project.title}
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="cover" // Changed from contain for project cards for better fill
                   data-ai-hint={project.imageHint}
                   className="transition-transform duration-300 group-hover:scale-105"
                   // Conditional placeholder and blurDataURL for locally imported images vs. remote URLs
-                  placeholder={typeof project.imageUrl === 'string' && project.imageUrl.startsWith('https://placehold.co') ? undefined : 'blur'}
-                  blurDataURL={typeof project.imageUrl === 'string' && project.imageUrl.startsWith('https://placehold.co') ? undefined : (project.imageUrl as StaticImageData).blurDataURL}
+                  placeholder={typeof project.imageUrl === 'string' ? undefined : 'blur'}
+                  blurDataURL={typeof project.imageUrl === 'string' ? undefined : (project.imageUrl as StaticImageData).blurDataURL}
                 />
               </div>
               <CardHeader>
