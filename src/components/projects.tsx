@@ -10,7 +10,7 @@ const projectsData: Project[] = [
   {
     id: '1',
     title: 'Plataforma de Estudos IA',
-    description: 'Uma plataforma web interativa que utiliza IA para gerar quizzes e flashcards personalizados, auxiliando estudantes em sua preparação.',
+    description: 'UGym aplicativo inteligente de monitoramento de academias, alunos e personais, aplicativo inovador',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'education technology',
     githubUrl: 'https://github.com/seuusuario/plataforma-estudos-ia',
