@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -30,12 +31,12 @@ export default function AboutMe() {
             </Card>
           </div>
           <div className="animate-fadeInLoad order-first md:order-last flex justify-center items-center" style={{ animationDelay: "0.4s" }}>
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden shadow-2xl border-4 border-primary">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden shadow-2xl border-4 border-primary bg-background">
               <Image
                 src="https://placehold.co/400x400.png"
                 alt="Kassio - Programador Full Stack"
                 layout="fill"
-                objectFit="cover"
+                objectFit="contain"
                 data-ai-hint="profile portrait"
                 className="transform hover:scale-105 transition-transform duration-300"
               />
