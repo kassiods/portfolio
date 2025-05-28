@@ -7,6 +7,7 @@ export interface Project {
   imageUrl: string;
   imageHint?: string;
   githubUrl: string;
+  liveDemoUrl?: string; // Added live demo URL
   tags: string[];
 }
 

@@ -14,6 +14,7 @@ const projectsData: Project[] = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'education technology',
     githubUrl: 'https://github.com/seuusuario/plataforma-estudos-ia',
+    liveDemoUrl: 'https://ugym-react.vercel.app',
     tags: ['React', 'Node.js', 'IA', 'Supabase'],
   },
   {
@@ -64,7 +65,7 @@ export default function Projects() {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="flex gap-4">
                 <Link href={project.githubUrl} passHref legacyBehavior>
                   <a target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
@@ -72,15 +73,15 @@ export default function Projects() {
                     </Button>
                   </a>
                 </Link>
-                {/* Optional: Live demo link
-                <Link href="#" passHref legacyBehavior>
-                  <a target="_blank" rel="noopener noreferrer" className="ml-auto">
-                    <Button variant="default" className="bg-primary hover:bg-primary/90">
-                      <ExternalLinkIcon className="mr-2 h-4 w-4" /> Ver Demo
-                    </Button>
-                  </a>
-                </Link>
-                */}
+                {project.liveDemoUrl && (
+                  <Link href={project.liveDemoUrl} passHref legacyBehavior>
+                    <a target="_blank" rel="noopener noreferrer">
+                      <Button variant="default" className="bg-primary hover:bg-primary/90">
+                        <ExternalLinkIcon className="mr-2 h-4 w-4" /> Ver Demo
+                      </Button>
+                    </a>
+                  </Link>
+                )}
               </CardFooter>
             </Card>
           ))}
