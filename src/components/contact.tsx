@@ -28,7 +28,7 @@ export default function Contact() {
               </Button>
             </a>
           </Link>
-          <Link href="https://instagram.com/seuusuario" passHref legacyBehavior>
+          <Link href="https://www.instagram.com/kassio.ds/" passHref legacyBehavior>
             <a target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                 <InstagramIcon className="mr-2 h-5 w-5" /> Instagram
