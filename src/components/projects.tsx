@@ -1,3 +1,4 @@
+
 import type { Project } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,13 +6,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { GithubIcon, ExternalLinkIcon } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import Logo from '@/assets/img/leftimage.png'; // Corrected import path
 
 const projectsData: Project[] = [
   {
     id: '1',
     title: 'UGym',
     description: 'UGym: Uma solução inteligente para o monitoramento de academias, otimizando a gestão de alunos e treinadores pessoais através de uma plataforma inovadora.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: Logo, // Use the imported image object
     imageHint: 'dumbbell logo',
     githubUrl: 'https://github.com/ifpi-picos/projeto-integrador-ugym',
     liveDemoUrl: 'https://ugym-react.vercel.app',
@@ -32,7 +34,7 @@ const projectsData: Project[] = [
     title: 'Explorando Novas Ideias',
     description: 'Estou constantemente desenvolvendo novos projetos e aprimorando minhas habilidades. Para acompanhar meus trabalhos mais recentes e outras contribuições, visite meu perfil no GitHub!',
     imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'coding gears', // Updated hint
+    imageHint: 'coding gears',
     githubUrl: 'https://github.com/kassiods',
     tags: ['Desenvolvimento Contínuo', 'Novidades', 'GitHub'],
   },
@@ -49,7 +51,7 @@ export default function Projects() {
           {projectsData.map((project, index) => (
             <Card
               key={project.id}
-              className="bg-card border-primary/20 shadow-lg hover:shadow-primary/30 transition-shadow duration-300 flex flex-col overflow-hidden animate-fadeInLoad group" // Added 'group' class
+              className="bg-card border-primary/20 shadow-lg hover:shadow-primary/30 transition-shadow duration-300 flex flex-col overflow-hidden animate-fadeInLoad group"
               style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
               <div className="relative w-full h-56">
@@ -60,6 +62,8 @@ export default function Projects() {
                   objectFit="cover"
                   data-ai-hint={project.imageHint}
                   className="transition-transform duration-300 group-hover:scale-105"
+                  placeholder={typeof project.imageUrl === 'string' && project.imageUrl.startsWith('https://placehold.co') ? undefined : "blur"}
+                  blurDataURL={typeof project.imageUrl === 'object' ? undefined : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="} // Provide a minimal blur placeholder for imported images if needed, or handle appropriately
                 />
               </div>
               <CardHeader>
